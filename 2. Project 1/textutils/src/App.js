@@ -7,7 +7,7 @@ import TextForm  from './components/TextForm';
 import { useState } from 'react';
 
 function App() {
-  const [mode, setMode] = useState('light'); //tells whether datk mode is enabled or not
+  const [mode, setMode] = useState('light'); //tells whether dark mode is enabled or not
   const [alert,setAlert] = useState(null)
 
   const showAlert = (message, type) => {
