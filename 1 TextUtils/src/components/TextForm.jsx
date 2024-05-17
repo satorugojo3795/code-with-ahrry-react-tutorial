@@ -33,7 +33,7 @@ const TextForm = (props) => {
     const [text,setText] = useState("Enter Text Here");
     return (
         <>
-            <h1>{props.heading}</h1>
+            <h1 style={props.myStyle} >{props.heading}</h1>
             <div className="mb-3">
                 <textarea className="form-control" onChange={handleOnChange} value={text} id="exampleFormControlTextarea1" rows="8" onClick={handleOnClick}></textarea>
             </div>
@@ -41,13 +41,14 @@ const TextForm = (props) => {
             <button className="btn btn-primary mx-3" onClick={handleLoClick}>Convert to LowerCase</button>
             <button className="btn btn-primary mx-3" onClick={ClearText}>Clear Text</button>
             <div className="container my-3">
-                <p>{text.split(" ").length} words and {text.length} characters</p>
+                <p style={props.myStyle} >{text.split(" ").length} words and {text.length} characters</p>
             </div>
         </>
     )
 }
 
 TextForm.propTypes = {
-    heading: PropTypes.string
+    heading: PropTypes.string,
+    myStyle: PropTypes.object
   };
 export default TextForm
